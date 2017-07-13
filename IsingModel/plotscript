@@ -1,0 +1,25 @@
+set terminal wxt size 1300,800
+
+set multiplot layout 2,2 title "Ising Model in 2d"
+
+
+
+set xlabel "Temperature [{\260}KJ/k_{B}]" 
+
+set ylabel "Absolute Magnetization per spin" 
+unset key
+plot 'ising1.dat' u 1:2
+
+set ylabel "Energy per spin" 
+unset key
+plot 'ising1.dat' u 1:3
+
+set ylabel "Specific Heat Capacity" 
+unset key
+plot 'ising1.dat' u 1:4
+
+set ylabel "Magnetic Susceptibility" 
+unset key
+plot 'ising1.dat' u 1:5
+
+unset multiplot
